@@ -1,6 +1,8 @@
 package com.example.test.ocss.model;
 import java.util.Objects;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
 import jakarta.persistence.*;
 
 
@@ -28,15 +30,53 @@ public class Seller {
     private int sales;
 
     public Long getSellerID() {
-        return sellerID;
+        return this.sellerID;
     }
 
+    // Seller Name
     public String getSellerName() {
-        return sellerName;
+        return this.sellerName;
     }
 
+    public void setSellerName(String sellerName) {
+        this.sellerName = sellerName;
+    }
+
+    // Seller username
     public String getSellerUserName() {
-        return sellerUserName;
+        return this.sellerUserName;
+    }
+
+
+    public void setSellerUsername(String sellerUsername) {
+        this.sellerUserName = sellerUsername;
+    }
+
+    // Seller Password
+    public String getSellerPassword() {
+        return this.sellerPassword;
+    }
+
+    public void setSellerPassword(String password) {
+        this.sellerPassword = password;
+    }
+
+    // Items sold
+    public String getItemsSold() {
+        return this.itemsSold;
+    }
+
+    public void setItemsSold(String items) {
+        this.itemsSold = items;
+    }
+
+    // Total Sales
+    public int getTotalSales() {
+        return this.sales;
+    }
+
+    public void setTotalSales(int sales) {
+        this.sales = sales;
     }
 
 }

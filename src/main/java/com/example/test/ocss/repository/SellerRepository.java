@@ -6,6 +6,5 @@ import com.example.test.ocss.model.Seller;
 import java.util.List;
 
 public interface SellerRepository extends JpaRepository<Seller, Long> {
-    @Query("SELECT * FROM sellers")
-    List<Seller> getAllSellers();
+    
 }
