@@ -1,4 +1,6 @@
 package com.example.test.ocss.service;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +15,9 @@ public class SellerService {
 
     public Seller saveSellerDetails(Seller seller) {
         return sellerRepo.save(seller);
+    }
+
+    public Optional<Seller> getAllSellers() {
+        return sellerRepo.getAllSellers();
     }
 }

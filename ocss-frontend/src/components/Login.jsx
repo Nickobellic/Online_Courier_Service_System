@@ -4,7 +4,7 @@ import "../styles/Login.css";
 
 function Login() {
 
-    async function addSellers() {
+    /*async function addSellers() {
         try {
         let response = await axios.post("http://localhost:8080/new-seller", {
             seller_name: "Jacob",
@@ -18,12 +18,21 @@ function Login() {
     } catch(err) {
         console.error(`Error in creating new Sellers: ${err}`);
     }
+    }*/
+
+    async function getAllSellers () {
+        try {
+            let response = await axios.get("http://localhost:8080/get-products");
+            console.log(response.data);
+        } catch(error) {
+            console.error(`Error in getting Sellers Details: ${error}`);
+        }
     }
 
     return (
         <div>
             <h1 className="welcome">Welcome to OCSS</h1>
-            <button onClick={addSellers}>Click Me</button>
+            <button onClick={getAllSellers}>Click Me</button>
         </div>
     )
 }

@@ -1,7 +1,6 @@
 package com.example.test.ocss.model;
 import java.util.Objects;
 
-import com.fasterxml.jackson.databind.JsonNode;
 
 import jakarta.persistence.*;
 
