@@ -1,3 +1,38 @@
+* {
+    color: white;
+}
+
 .welcome {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.login-tf {
+    width: 200px;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.login-title {
     text-align: center;
+    margin: 50px 0px;
+}
+
+.login-card {
+    background: linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%);
+    border-radius: 0;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+
+.click-btn {
+    align-self: center;
+    width: 120px;
 }

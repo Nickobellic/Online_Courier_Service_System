@@ -18,6 +18,28 @@ public class Users {
 
     @Column(name="username", nullable = false, unique = true)
     private String username;
+    
+    @Column(name="password", nullable = false)
+    private String password;
+
+    @Column(name="email", nullable = false)
+    private String email;
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return this.password;
+    } 
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getUsername() {
         return this.username;

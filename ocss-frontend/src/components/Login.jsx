@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
+import Card from '@mui/material/Card';
+import { TextField } from "@mui/material";
+import {inputLabelClasses} from "@mui/material";
+import {Button} from "@mui/material";
+import CardContent from '@mui/material/CardContent';
+import '@fontsource/roboto/700.css';
 import axios from 'axios';
 import "../styles/Login.css";
+import {Typography} from "@mui/material";
 
 function Login() {
 
@@ -30,9 +37,31 @@ function Login() {
     }
 
     return (
-        <div>
-            <h1 className="welcome">Welcome to OCSS</h1>
-            <button onClick={getAllSellers}>Click Me</button>
+        <div className="welcome">
+            <Card className="login-card" sx={{borderRadius: "50px"}}>
+                <div className="login-title" >
+                <Typography  variant="h3">
+                    Login
+                     </Typography>
+                </div> 
+                <div className="login-tf">
+                    <TextField InputLabelProps={{
+                        sx: {
+                            color: "white",
+                        }
+                    }} id="outlined-basic" label="Name" variant="outlined" />
+                </div>
+                
+                <div className="login-tf">
+                    <TextField InputLabelProps={{
+                        sx: {
+                            color: "white",
+                        }
+                    }} id="outlined-basic" label="Password" variant="outlined" />
+                </div>
+
+                <Button className="click-btn" variant="contained" onClick={getAllSellers} >Click Me</Button>
+            </Card>
         </div>
     )
 }
